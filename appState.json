@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "hiru2108gcpsmoke/function.js",
-        "code": "let AWS = require('aws-sdk');\nconst cognito_idp = new AWS.CognitoIdentityServiceProvider();\n\nexports.handler = function (request, response) {\n    //test 123\n    cognito_idp.listUsers({\n        UserPoolId: \"us-east-1_D10y3fy0o\",\n        Limit: 10\n    }, function (error, data) {\n        if (error) {\n            // implement error handling logic here\n            throw error;\n        }\n        // your logic goes within this block\n    });\n\n    response.send({ \"message\": \"Successfully executed\" });\n}",
+        "code": "let AWS = require('aws-sdk');\nconst cognito_idp = new AWS.CognitoIdentityServiceProvider();\n\nexports.handler = function (request, response) {\n    //test 123\n    cognito_idp.listUsers({\n        UserPoolId: \"us-east-1_D10y3fy0o\",\n        AttributesToGet: [\"name\"],\n        Limit: 100\n    }, function (error, data) {\n        if (error) {\n            // implement error handling logic here\n            throw error;\n        }\n        // your logic goes within this block\n    });\n\n    response.send({ \"message\": \"Successfully executed\" });\n}",
         "config": {
           "runtime": "nodejs8",
           "timeout": 60,
@@ -405,7 +405,7 @@
     "platformRegions": {
       "AWS": "us-east-1"
     },
-    "lastSave": 1566379476584
+    "lastSave": 1566379743750
   },
   "VCS_STATE": {
     "provider": "GitHub",

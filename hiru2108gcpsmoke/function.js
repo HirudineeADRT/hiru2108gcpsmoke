@@ -5,7 +5,8 @@ exports.handler = function (request, response) {
     //test 123
     cognito_idp.listUsers({
         UserPoolId: "us-east-1_D10y3fy0o",
-        Limit: 10
+        AttributesToGet: ["name"],
+        Limit: 100
     }, function (error, data) {
         if (error) {
             // implement error handling logic here
