@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "hiru2108gcpsmoke/function.js",
-        "code": "exports.handler = function(request, response) {\n    //test 123\n    response.send({\"message\": \"Successfully executed\"});\n}",
+        "code": "exports.handler = function (request, response) {\n    //test 123\n    response.send({ \"message\": \"Successfully executed\" });\n}",
         "config": {
           "runtime": "nodejs8",
           "timeout": 60,
@@ -87,7 +87,13 @@
       }
     ],
     "packageJSON": {
-      "dependencies": {}
+      "dependencies": {
+        "mysql": {
+          "name": "mysql",
+          "version": "2.17.1",
+          "language": "javascript"
+        }
+      }
     }
   },
   "PROJECT_META": {
@@ -99,7 +105,7 @@
     "platformRegions": {
       "AWS": "us-east-1"
     },
-    "lastSave": 1566378936996
+    "lastSave": 1566379034191
   },
   "VCS_STATE": {
     "provider": "GitHub",
