@@ -345,6 +345,14 @@
       },
       {
         "lambdaId": "all",
+        "varKey": "Kumu",
+        "varValue": "123",
+        "shouldPersist": true,
+        "displayOnly": false,
+        "editable": true
+      },
+      {
+        "lambdaId": "all",
         "varKey": "AWS_ACCESS_KEY_ID",
         "varValue": null,
         "shouldPersist": false,
@@ -366,18 +374,15 @@
         "shouldPersist": false,
         "displayOnly": false,
         "editable": false
-      },
-      {
-        "lambdaId": "all",
-        "varKey": "Kumu",
-        "varValue": "123",
-        "shouldPersist": true,
-        "displayOnly": false,
-        "editable": true
       }
     ],
     "packageJSON": {
       "dependencies": {
+        "math": {
+          "name": "math",
+          "version": "0.0.3",
+          "language": "javascript"
+        },
         "mysql": {
           "name": "mysql",
           "version": "2.17.1",
@@ -385,10 +390,8 @@
         },
         "aws-sdk": {
           "name": "aws-sdk",
-          "language": "javascript",
           "version": "2.176.0",
-          "dev": false,
-          "notRemovable": false
+          "language": "javascript"
         }
       }
     }
@@ -402,7 +405,7 @@
     "platformRegions": {
       "AWS": "us-east-1"
     },
-    "lastSave": 1566379363766
+    "lastSave": 1566379476584
   },
   "VCS_STATE": {
     "provider": "GitHub",
