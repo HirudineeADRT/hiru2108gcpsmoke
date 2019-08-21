@@ -10,8 +10,8 @@
         "children": [
           "dda6b268-010f-40f2-908c-81bfc145d13a",
           "2badb651-defe-44a9-a7dd-1cf1e7358c0d",
-          "9f2cc24e-18e3-4ac7-a832-ca84df9dcc92",
-          "fb2f31a6-6d5e-45f7-8f7b-11495645c93d"
+          "fb2f31a6-6d5e-45f7-8f7b-11495645c93d",
+          "9f2cc24e-18e3-4ac7-a832-ca84df9dcc92"
         ],
         "isRemovable": false,
         "filePath": "hiru2108gcpsmoke"
@@ -93,6 +93,29 @@
           }
         ]
       },
+      "fb2f31a6-6d5e-45f7-8f7b-11495645c93d": {
+        "id": "fb2f31a6-6d5e-45f7-8f7b-11495645c93d",
+        "parent": "819347e5-7bbf-4106-a600-055abaa5060c",
+        "name": "testsamplehiru.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hiru2108gcpsmoke/testsamplehiru.js",
+        "code": "exports.handler = function(event, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8",
+          "timeout": 60,
+          "memory": 128,
+          "triggerType": 1
+        },
+        "triggers": [
+          {
+            "resourceName": "pubsubcloudBuilds",
+            "config": {}
+          }
+        ]
+      },
       "9f2cc24e-18e3-4ac7-a832-ca84df9dcc92": {
         "id": "9f2cc24e-18e3-4ac7-a832-ca84df9dcc92",
         "parent": "819347e5-7bbf-4106-a600-055abaa5060c",
@@ -115,33 +138,16 @@
         "isRemovable": true,
         "filePath": "hiru2108gcpsmoke/kdir/k.js",
         "code": ""
-      },
-      "fb2f31a6-6d5e-45f7-8f7b-11495645c93d": {
-        "id": "fb2f31a6-6d5e-45f7-8f7b-11495645c93d",
-        "parent": "819347e5-7bbf-4106-a600-055abaa5060c",
-        "name": "testsamplehiru.js",
-        "type": "JS_LAMBDA",
-        "isDirectory": false,
-        "children": [],
-        "isRemovable": true,
-        "filePath": "hiru2108gcpsmoke/testsamplehiru.js",
-        "code": "exports.handler = function(event, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
-        "config": {
-          "runtime": "nodejs8",
-          "timeout": 60,
-          "memory": 128,
-          "triggerType": 1
-        },
-        "triggers": []
       }
     },
     "deletedFiles": [],
     "rootNode": "819347e5-7bbf-4106-a600-055abaa5060c",
     "openFiles": [
       "dda6b268-010f-40f2-908c-81bfc145d13a",
-      "5a6b3475-2ee5-4a3e-b935-dd35f712c21f"
+      "2badb651-defe-44a9-a7dd-1cf1e7358c0d",
+      "fb2f31a6-6d5e-45f7-8f7b-11495645c93d"
     ],
-    "currentFileId": "5a6b3475-2ee5-4a3e-b935-dd35f712c21f",
+    "currentFileId": "fb2f31a6-6d5e-45f7-8f7b-11495645c93d",
     "resources": {
       "http-trigger": {
         "name": "http-trigger",
@@ -433,14 +439,6 @@
       },
       {
         "lambdaId": "all",
-        "varKey": "Kumu",
-        "varValue": "123",
-        "shouldPersist": true,
-        "displayOnly": false,
-        "editable": true
-      },
-      {
-        "lambdaId": "all",
         "varKey": "AWS_ACCESS_KEY_ID",
         "varValue": null,
         "shouldPersist": false,
@@ -462,15 +460,18 @@
         "shouldPersist": false,
         "displayOnly": false,
         "editable": false
+      },
+      {
+        "lambdaId": "all",
+        "varKey": "Kumu",
+        "varValue": "123",
+        "shouldPersist": true,
+        "displayOnly": false,
+        "editable": true
       }
     ],
     "packageJSON": {
       "dependencies": {
-        "math": {
-          "name": "math",
-          "version": "0.0.3",
-          "language": "javascript"
-        },
         "mysql": {
           "name": "mysql",
           "version": "2.17.1",
@@ -478,7 +479,14 @@
         },
         "aws-sdk": {
           "name": "aws-sdk",
+          "language": "javascript",
           "version": "2.176.0",
+          "dev": false,
+          "notRemovable": false
+        },
+        "math": {
+          "name": "math",
+          "version": "0.0.3",
           "language": "javascript"
         }
       }
@@ -493,7 +501,7 @@
     "platformRegions": {
       "AWS": "us-east-1"
     },
-    "lastSave": 1566380170063
+    "lastSave": 1566380507075
   },
   "VCS_STATE": {
     "provider": "GitHub",
