@@ -23,7 +23,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "hiru2108gcpsmoke/function.js",
-        "code": "let AWS = require('aws-sdk');\nconst cognito_idp = new AWS.CognitoIdentityServiceProvider();\n\nexports.handler = function (request, response) {\n    //test 123\n    cognito_idp.listUsers({\n        UserPoolId: \"us-east-1_D10y3fy0o\",\n        AttributesToGet: [\"name\"],\n        Limit: 100\n    }, function (error, data) {\n        if (error) {\n            // implement error handling logic here\n            throw error;\n        }\n        // your logic goes within this block\n    });\n\n    response.send({ \"message\": \"Successfully executed\" });\n}",
+        "code": "exports.handler = function (request, response) {\n\n\n    response.send({ \"message\": \"Successfully executed\" });\n}",
         "config": {
           "runtime": "nodejs8",
           "timeout": 60,
@@ -86,8 +86,7 @@
     "deletedFiles": [],
     "rootNode": "819347e5-7bbf-4106-a600-055abaa5060c",
     "openFiles": [
-      "dda6b268-010f-40f2-908c-81bfc145d13a",
-      "2badb651-defe-44a9-a7dd-1cf1e7358c0d"
+      "dda6b268-010f-40f2-908c-81bfc145d13a"
     ],
     "currentFileId": "dda6b268-010f-40f2-908c-81bfc145d13a",
     "resources": {
@@ -370,6 +369,14 @@
       },
       {
         "lambdaId": "all",
+        "varKey": "Kumu",
+        "varValue": "123",
+        "shouldPersist": true,
+        "displayOnly": false,
+        "editable": true
+      },
+      {
+        "lambdaId": "all",
         "varKey": "AWS_ACCESS_KEY_ID",
         "varValue": null,
         "shouldPersist": false,
@@ -391,18 +398,15 @@
         "shouldPersist": false,
         "displayOnly": false,
         "editable": false
-      },
-      {
-        "lambdaId": "all",
-        "varKey": "Kumu",
-        "varValue": "123",
-        "shouldPersist": true,
-        "displayOnly": false,
-        "editable": true
       }
     ],
     "packageJSON": {
       "dependencies": {
+        "math": {
+          "name": "math",
+          "version": "0.0.3",
+          "language": "javascript"
+        },
         "mysql": {
           "name": "mysql",
           "version": "2.17.1",
@@ -410,14 +414,7 @@
         },
         "aws-sdk": {
           "name": "aws-sdk",
-          "language": "javascript",
           "version": "2.176.0",
-          "dev": false,
-          "notRemovable": false
-        },
-        "math": {
-          "name": "math",
-          "version": "0.0.3",
           "language": "javascript"
         }
       }
@@ -432,7 +429,7 @@
     "platformRegions": {
       "AWS": "us-east-1"
     },
-    "lastSave": 1566379781613
+    "lastSave": 1566379966408
   },
   "VCS_STATE": {
     "provider": "GitHub",
