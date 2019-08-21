@@ -140,7 +140,8 @@
     "openFiles": [
       "dda6b268-010f-40f2-908c-81bfc145d13a",
       "5a6b3475-2ee5-4a3e-b935-dd35f712c21f",
-      "fb2f31a6-6d5e-45f7-8f7b-11495645c93d"
+      "fb2f31a6-6d5e-45f7-8f7b-11495645c93d",
+      "2badb651-defe-44a9-a7dd-1cf1e7358c0d"
     ],
     "currentFileId": "fb2f31a6-6d5e-45f7-8f7b-11495645c93d",
     "resources": {
@@ -194,6 +195,14 @@
         "shouldPersist": false,
         "displayOnly": false,
         "editable": false
+      },
+      {
+        "lambdaId": "all",
+        "varKey": "Hasi",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": true
       }
     ],
     "packageJSON": {
@@ -225,7 +234,7 @@
     "platformRegions": {
       "AWS": "us-east-1"
     },
-    "lastSave": 1566382057254
+    "lastSave": 1566383257862
   },
   "VCS_STATE": {
     "provider": "GitHub",
