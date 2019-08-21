@@ -137,7 +137,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "hiru2108gcpsmoke/kdir/k.js",
-        "code": ""
+        "code": "//edit"
       }
     },
     "deletedFiles": [],
@@ -145,9 +145,10 @@
     "openFiles": [
       "dda6b268-010f-40f2-908c-81bfc145d13a",
       "2badb651-defe-44a9-a7dd-1cf1e7358c0d",
-      "fb2f31a6-6d5e-45f7-8f7b-11495645c93d"
+      "fb2f31a6-6d5e-45f7-8f7b-11495645c93d",
+      "5a6b3475-2ee5-4a3e-b935-dd35f712c21f"
     ],
-    "currentFileId": "2badb651-defe-44a9-a7dd-1cf1e7358c0d",
+    "currentFileId": "5a6b3475-2ee5-4a3e-b935-dd35f712c21f",
     "resources": {
       "http-trigger": {
         "name": "http-trigger",
@@ -509,7 +510,7 @@
     "platformRegions": {
       "AWS": "us-east-1"
     },
-    "lastSave": 1566385230007
+    "lastSave": 1566389109123
   },
   "VCS_STATE": {
     "provider": "GitHub",
