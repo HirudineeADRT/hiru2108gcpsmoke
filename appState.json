@@ -9,7 +9,8 @@
         "isDirectory": true,
         "children": [
           "dda6b268-010f-40f2-908c-81bfc145d13a",
-          "2badb651-defe-44a9-a7dd-1cf1e7358c0d"
+          "2badb651-defe-44a9-a7dd-1cf1e7358c0d",
+          "fb2f31a6-6d5e-45f7-8f7b-11495645c93d"
         ],
         "isRemovable": false,
         "filePath": "hiru2108gcpsmoke"
@@ -46,7 +47,7 @@
         "children": [],
         "isRemovable": false,
         "filePath": "index.js",
-        "code": "// This file is used to register all your cloud functions in GCP.\n// DO NOT EDIT/DELETE THIS, UNLESS YOU KNOW WHAT YOU ARE DOING.\n\nexports.hiru2108gcpsmokefunction = require(\"./hiru2108gcpsmoke/function.js\").handler;\nexports.hiru2108gcpsmokesamplehiru = require(\"./hiru2108gcpsmoke/samplehiru.js\").handler;"
+        "code": "// This file is used to register all your cloud functions in GCP.\n// DO NOT EDIT/DELETE THIS, UNLESS YOU KNOW WHAT YOU ARE DOING.\n\nexports.hiru2108gcpsmokefunction = require(\"./hiru2108gcpsmoke/function.js\").handler;\nexports.hiru2108gcpsmokesamplehiru = require(\"./hiru2108gcpsmoke/samplehiru.js\").handler;\nexports.hiru2108gcpsmoketestsamplehiru = require(\"./hiru2108gcpsmoke/testsamplehiru.js\").handler;"
       },
       "c8faafbb-7980-4f93-bfba-8e2c7ce85342": {
         "id": "c8faafbb-7980-4f93-bfba-8e2c7ce85342",
@@ -81,14 +82,39 @@
             "config": {}
           }
         ]
+      },
+      "fb2f31a6-6d5e-45f7-8f7b-11495645c93d": {
+        "id": "fb2f31a6-6d5e-45f7-8f7b-11495645c93d",
+        "parent": "819347e5-7bbf-4106-a600-055abaa5060c",
+        "name": "testsamplehiru.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hiru2108gcpsmoke/testsamplehiru.js",
+        "code": "exports.handler = function(event, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8",
+          "timeout": 60,
+          "memory": 128,
+          "triggerType": 1
+        },
+        "triggers": [
+          {
+            "resourceName": "pubsubcloudBuilds",
+            "config": {}
+          }
+        ]
       }
     },
     "deletedFiles": [],
     "rootNode": "819347e5-7bbf-4106-a600-055abaa5060c",
     "openFiles": [
-      "dda6b268-010f-40f2-908c-81bfc145d13a"
+      "dda6b268-010f-40f2-908c-81bfc145d13a",
+      "2badb651-defe-44a9-a7dd-1cf1e7358c0d",
+      "fb2f31a6-6d5e-45f7-8f7b-11495645c93d"
     ],
-    "currentFileId": "dda6b268-010f-40f2-908c-81bfc145d13a",
+    "currentFileId": "fb2f31a6-6d5e-45f7-8f7b-11495645c93d",
     "resources": {
       "http-trigger": {
         "name": "http-trigger",
@@ -352,6 +378,17 @@
             ]
           }
         }
+      },
+      "pubsubcloudBuilds": {
+        "name": "pubsubcloudBuilds",
+        "type": "pubsub",
+        "config": {
+          "mode": 1,
+          "topic": {
+            "name": "cloud-builds",
+            "subscriptions": []
+          }
+        }
       }
     },
     "customTemplate": {
@@ -366,14 +403,6 @@
         "shouldPersist": false,
         "displayOnly": false,
         "editable": false
-      },
-      {
-        "lambdaId": "all",
-        "varKey": "Kumu",
-        "varValue": "123",
-        "shouldPersist": true,
-        "displayOnly": false,
-        "editable": true
       },
       {
         "lambdaId": "all",
@@ -398,15 +427,18 @@
         "shouldPersist": false,
         "displayOnly": false,
         "editable": false
+      },
+      {
+        "lambdaId": "all",
+        "varKey": "Kumu",
+        "varValue": "123",
+        "shouldPersist": true,
+        "displayOnly": false,
+        "editable": true
       }
     ],
     "packageJSON": {
       "dependencies": {
-        "math": {
-          "name": "math",
-          "version": "0.0.3",
-          "language": "javascript"
-        },
         "mysql": {
           "name": "mysql",
           "version": "2.17.1",
@@ -414,7 +446,14 @@
         },
         "aws-sdk": {
           "name": "aws-sdk",
+          "language": "javascript",
           "version": "2.176.0",
+          "dev": false,
+          "notRemovable": false
+        },
+        "math": {
+          "name": "math",
+          "version": "0.0.3",
           "language": "javascript"
         }
       }
@@ -429,7 +468,7 @@
     "platformRegions": {
       "AWS": "us-east-1"
     },
-    "lastSave": 1566379966408
+    "lastSave": 1566380082867
   },
   "VCS_STATE": {
     "provider": "GitHub",

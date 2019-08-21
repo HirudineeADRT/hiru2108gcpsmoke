@@ -3,3 +3,4 @@
 
 exports.hiru2108gcpsmokefunction = require("./hiru2108gcpsmoke/function.js").handler;
 exports.hiru2108gcpsmokesamplehiru = require("./hiru2108gcpsmoke/samplehiru.js").handler;
+exports.hiru2108gcpsmoketestsamplehiru = require("./hiru2108gcpsmoke/testsamplehiru.js").handler;
