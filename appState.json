@@ -1,0 +1,111 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "819347e5-7bbf-4106-a600-055abaa5060c": {
+        "id": "819347e5-7bbf-4106-a600-055abaa5060c",
+        "parent": null,
+        "name": "hiru2108gcpsmoke",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "dda6b268-010f-40f2-908c-81bfc145d13a"
+        ],
+        "isRemovable": false,
+        "filePath": "hiru2108gcpsmoke"
+      },
+      "dda6b268-010f-40f2-908c-81bfc145d13a": {
+        "id": "dda6b268-010f-40f2-908c-81bfc145d13a",
+        "parent": "819347e5-7bbf-4106-a600-055abaa5060c",
+        "name": "function.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hiru2108gcpsmoke/function.js",
+        "code": "exports.handler = function(request, response) {\n    \n    response.send({\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8",
+          "timeout": 60,
+          "memory": 128,
+          "triggerType": 0
+        },
+        "triggers": [
+          {
+            "resourceName": "http-trigger",
+            "config": {}
+          }
+        ]
+      },
+      "d37382b0-f5d9-4cef-aebb-baf3b2cea71c": {
+        "id": "d37382b0-f5d9-4cef-aebb-baf3b2cea71c",
+        "parent": null,
+        "name": "index.js",
+        "type": "JS_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": false,
+        "filePath": "index.js",
+        "code": "// This file is used to register all your cloud functions in GCP.\n// DO NOT EDIT/DELETE THIS, UNLESS YOU KNOW WHAT YOU ARE DOING.\n\nexports.hiru2108gcpsmokefunction = require(\"./hiru2108gcpsmoke/function.js\").handler;"
+      },
+      "c8faafbb-7980-4f93-bfba-8e2c7ce85342": {
+        "id": "c8faafbb-7980-4f93-bfba-8e2c7ce85342",
+        "parent": null,
+        "name": "main.py",
+        "type": "PYTHON_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": false,
+        "filePath": "main.py",
+        "code": "# This file is used to register all your cloud functions in GCP.\n# DO NOT EDIT/DELETE THIS, UNLESS YOU KNOW WHAT YOU ARE DOING.\n\n"
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "819347e5-7bbf-4106-a600-055abaa5060c",
+    "openFiles": [
+      "dda6b268-010f-40f2-908c-81bfc145d13a"
+    ],
+    "currentFileId": "dda6b268-010f-40f2-908c-81bfc145d13a",
+    "resources": {
+      "http-trigger": {
+        "name": "http-trigger",
+        "type": "http-trigger",
+        "config": {}
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": {}
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "AWS_REGION",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "hiru2108gcpsmoke",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east1",
+    "platform": "GCP",
+    "platformRegions": {
+      "AWS": "us-east-1"
+    },
+    "lastSave": 1566378605443
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "hiru2108gcpsmoke",
+      "url": "https://github.com/HirudineeADRT/hiru2108gcpsmoke"
+    }
+  }
+}
