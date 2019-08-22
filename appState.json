@@ -11,7 +11,8 @@
           "dda6b268-010f-40f2-908c-81bfc145d13a",
           "2badb651-defe-44a9-a7dd-1cf1e7358c0d",
           "fb2f31a6-6d5e-45f7-8f7b-11495645c93d",
-          "9f2cc24e-18e3-4ac7-a832-ca84df9dcc92"
+          "9f2cc24e-18e3-4ac7-a832-ca84df9dcc92",
+          "2861b675-9468-4e62-a5d2-c6cefb72ad45"
         ],
         "isRemovable": false,
         "filePath": "hiru2108gcpsmoke"
@@ -57,7 +58,7 @@
         "children": [],
         "isRemovable": false,
         "filePath": "index.js",
-        "code": "// This file is used to register all your cloud functions in GCP.\n// DO NOT EDIT/DELETE THIS, UNLESS YOU KNOW WHAT YOU ARE DOING.\n\nexports.hiru2108gcpsmokefunction = require(\"./hiru2108gcpsmoke/function.js\").handler;\nexports.hiru2108gcpsmokesamplehiru = require(\"./hiru2108gcpsmoke/samplehiru.js\").handler;\nexports.hiru2108gcpsmoketestsamplehiru = require(\"./hiru2108gcpsmoke/testsamplehiru.js\").handler;"
+        "code": "// This file is used to register all your cloud functions in GCP.\n// DO NOT EDIT/DELETE THIS, UNLESS YOU KNOW WHAT YOU ARE DOING.\n\nexports.hiru2108gcpsmokefunction = require(\"./hiru2108gcpsmoke/function.js\").handler;\nexports.hiru2108gcpsmokesamplehiru = require(\"./hiru2108gcpsmoke/samplehiru.js\").handler;\nexports.hiru2108gcpsmoketestsamplehiru = require(\"./hiru2108gcpsmoke/testsamplehiru.js\").handler;\nexports.hiru2108gcpsmoketesthiru77 = require(\"./hiru2108gcpsmoke/testhiru77.js\").handler;"
       },
       "c8faafbb-7980-4f93-bfba-8e2c7ce85342": {
         "id": "c8faafbb-7980-4f93-bfba-8e2c7ce85342",
@@ -138,6 +139,29 @@
         "isRemovable": true,
         "filePath": "hiru2108gcpsmoke/kdir/k.js",
         "code": "//edit"
+      },
+      "2861b675-9468-4e62-a5d2-c6cefb72ad45": {
+        "id": "2861b675-9468-4e62-a5d2-c6cefb72ad45",
+        "parent": "819347e5-7bbf-4106-a600-055abaa5060c",
+        "name": "testhiru77.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hiru2108gcpsmoke/testhiru77.js",
+        "code": "exports.handler = function(request, response) {\n    \n    response.send({\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8",
+          "timeout": 60,
+          "memory": 128,
+          "triggerType": 0
+        },
+        "triggers": [
+          {
+            "resourceName": "http-trigger",
+            "config": {}
+          }
+        ]
       }
     },
     "deletedFiles": [],
@@ -146,9 +170,10 @@
       "dda6b268-010f-40f2-908c-81bfc145d13a",
       "2badb651-defe-44a9-a7dd-1cf1e7358c0d",
       "fb2f31a6-6d5e-45f7-8f7b-11495645c93d",
-      "5a6b3475-2ee5-4a3e-b935-dd35f712c21f"
+      "5a6b3475-2ee5-4a3e-b935-dd35f712c21f",
+      "2861b675-9468-4e62-a5d2-c6cefb72ad45"
     ],
-    "currentFileId": "5a6b3475-2ee5-4a3e-b935-dd35f712c21f",
+    "currentFileId": "2861b675-9468-4e62-a5d2-c6cefb72ad45",
     "resources": {
       "http-trigger": {
         "name": "http-trigger",
@@ -510,7 +535,7 @@
     "platformRegions": {
       "AWS": "us-east-1"
     },
-    "lastSave": 1566389109123
+    "lastSave": 1566450026349
   },
   "VCS_STATE": {
     "provider": "GitHub",
